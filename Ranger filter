@@ -1,0 +1,187 @@
+# Sockets
+Show
+Rarity Normal Magic
+Sockets 2
+Class "Claw" "Dagger" "Sword" "Axe" "Mace" "Spear" "Flail" "Crossbows" "Wand" "Sceptre" "Staff" "Shield" "Focus" "Buckler"  "Helmet" "Body Armour" "Gloves" "Boots" "Bow" "Quiver" 
+Height <= 3
+SetTextColor 122 122 122
+
+# Melee Gear
+Hide
+Class "Helmet" "Body Armour" "Gloves" "Boots"
+Rarity Normal Magic
+BaseEvasion >= 1
+BaseArmour >= 1
+BaseEnergyShield <= 1
+SetFontSize 18
+SetBorderColor 150 50 50
+SetBackgroundColor 100 43 43 200
+
+# Range Gear
+Show
+Class "Helmet" "Body Armour" "Gloves" "Boots"
+Rarity Normal Magic
+BaseEvasion >= 1
+BaseArmour <= 1
+BaseEnergyShield <= 1
+SetBorderColor 0 150 0
+SetBackgroundColor 4 67 4 200
+
+# Caster Gear
+Hide
+Class "Helmet" "Body Armour" "Gloves" "Boots"
+Rarity Normal Magic
+BaseEvasion >= 1
+BaseArmour <= 1
+BaseEnergyShield >= 1
+SetFontSize 18
+SetBorderColor 50 50 150
+SetBackgroundColor 43 43 100 200
+
+# Unique
+Show
+Rarity Unique
+SetBorderColor 175 96 37 255
+SetBackgroundColor 53 13 13 255
+PlayAlertSound 3 300
+PlayEffect Brown
+MinimapIcon 2 Brown Star
+
+# S Tier
+Show
+Class "Currency"
+BaseType "Mirror" "Perfect Jeweller's Orb" "Greater Jeweller's Orb" "Divine" 
+SetTextColor 163 0 0 235
+SetBorderColor 163 0 0 235
+SetBackgroundColor 255 255 255 200
+PlayAlertSound 6 300
+PlayEffect Red
+MinimapIcon 0 Red Circle
+
+# A Tier
+Show
+Class "Currency"
+BaseType "Exalted Orb" "Orb of Annulment" "Gemcutter's Prism" "Orb of Chance"
+SetTextColor 255 128 0
+SetBorderColor 255 207 132
+SetBackgroundColor 76 51 12 200
+PlayAlertSound 1 300
+PlayEffect Orange
+MinimapIcon 0 Orange Circle
+
+# B Tier
+Show
+BaseType "Exotic" "Glassblower's Bauble" "Orb of Alchemy" "Key" "Relic"
+SetTextColor 255 207 132
+SetBorderColor 255 207 132
+SetBackgroundColor 76 51 12 200
+PlayAlertSound 2 300
+PlayEffect Yellow
+MinimapIcon 1 Yellow Circle
+
+# C Tier
+Show
+BaseType "Lesser Jeweller's Orb" "Vaal Orb" "Regal Orb" "Artificer's Orb" "Armourer" "Blacksmith" "Arcanist"
+SetTextColor 255 245 230
+SetBorderColor 255 207 132
+SetBackgroundColor 76 51 12 200
+PlayAlertSound 2 300
+PlayEffect White
+MinimapIcon 1 White Circle
+
+# Uncut Skill & Support Gems
+Show
+BaseType "Uncut "
+SetTextColor 13 163 156
+PlayAlertSound 2 300
+PlayEffect Cyan
+MinimapIcon 1 Cyan Triangle
+
+# Map Loot
+Show
+BaseType "Distilled" "Catalyst" "Essence of" "Omen of" "Soul Core of" "Simulacrum" " Tablet" "Breachstone" " Fragment" "Cowardly Fate" "Deadly Fate" "Victorious Fate" "Expedition Logbook"
+SetBorderColor 255 207 255
+SetBackgroundColor 65 20 80
+PlayEffect Purple
+MinimapIcon 1 Purple Kite
+
+# Maps Red
+Show
+BaseType "(Tier 11)" "(Tier 12)" "(Tier 13)" "(Tier 14)" "(Tier 15)"
+SetBorderColor 163 0 0 235
+PlayEffect Red
+MinimapIcon 1 Red Square
+
+# Maps Yellow
+Show
+BaseType "(Tier 6)" "(Tier 7)" "(Tier 8)" "(Tier 9)" "(Tier 10)"
+SetBorderColor 255 190 0 235
+PlayEffect Yellow
+MinimapIcon 1 Yellow Square
+
+# Maps White
+Show
+BaseType "(Tier 1)" "(Tier 2)" "(Tier 3)" "(Tier 4)" "(Tier 5)"
+SetTextColor 200 200 200 235
+SetBorderColor 200 200 200
+PlayEffect White
+MinimapIcon 1 White Square
+
+# Keys
+Show
+BaseType "Barya" "Ultimatum"
+SetTextColor 255 85 85
+SetBorderColor 255 85 85
+SetBackgroundColor 40 0 30
+PlayEffect Pink
+
+# Runes
+Show
+BaseType "Rune"
+SetTextColor 185 219 242
+SetBorderColor 77 55 48
+PlayEffect Blue
+
+# Value Rares
+Show
+Class "Rings" "Amulets" "Belts"
+Rarity Rare
+PlayEffect Yellow
+MinimapIcon 1 Yellow Diamond
+
+# Life
+Show
+Class "Life Flasks"
+SetTextColor 219 134 134
+SetBorderColor 120 0 0 200
+
+# Mana
+Show
+Class "Mana Flasks"
+SetTextColor 143 143 230
+SetBorderColor 0 0 120 200
+
+# Hide ID
+Hide
+BaseType "Wisdom"
+AreaLevel >= 20
+SetBorderColor 200 100 60
+SetBackgroundColor 30 5 5
+
+# Hide Corrupted
+Hide
+Rarity Normal Magic
+Corrupted True
+SetFontSize 18
+SetBorderColor 0 0 0 0
+SetBackgroundColor 0 0 0 0
+
+# Hide
+Hide
+Rarity Normal Magic
+Class "Claw" "Dagger" "Sword" "Axe" "Mace" "Spear" "Flail" "Crossbows" "Wand" "Sceptre" "Staff" "Shield" "Focus" "Buckler"  "Helmet" "Body Armour" "Gloves" "Boots"  #"Bow" "Quiver" 
+AreaLevel >= 16
+SetFontSize 18
+SetBorderColor 0 0 0 0
+SetBackgroundColor 0 0 0 0
+
