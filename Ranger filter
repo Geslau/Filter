@@ -2,41 +2,9 @@
 Show
 Rarity Normal Magic
 Sockets 2
-Class "Claw" "Dagger" "Sword" "Axe" "Mace" "Spear" "Flail" "Crossbows" "Wand" "Sceptre" "Staff" "Shield" "Focus" "Buckler"  "Helmet" "Body Armour" "Gloves" "Boots" "Bow" "Quiver" 
+Class "Claw" "Dagger" "Sword" "Axe" "Mace" "Spear" "Flail" "Crossbows" "Wand" "Sceptre" "Staff" "Quarterstaves" "Shield" "Focus" "Buckler" "Helmets" "Body Armours" "Gloves" "Boots" "Bow" "Quiver" 
 Height <= 3
 SetTextColor 122 122 122
-
-# Melee Gear
-Hide
-Class "Helmet" "Body Armour" "Gloves" "Boots"
-Rarity Normal Magic
-BaseEvasion >= 1
-BaseArmour >= 1
-BaseEnergyShield <= 1
-SetFontSize 18
-SetBorderColor 150 50 50
-SetBackgroundColor 100 43 43 200
-
-# Range Gear
-Show
-Class "Helmet" "Body Armour" "Gloves" "Boots"
-Rarity Normal Magic
-BaseEvasion >= 1
-BaseArmour <= 1
-BaseEnergyShield <= 1
-SetBorderColor 0 150 0
-SetBackgroundColor 4 67 4 200
-
-# Caster Gear
-Hide
-Class "Helmet" "Body Armour" "Gloves" "Boots"
-Rarity Normal Magic
-BaseEvasion >= 1
-BaseArmour <= 1
-BaseEnergyShield >= 1
-SetFontSize 18
-SetBorderColor 50 50 150
-SetBackgroundColor 43 43 100 200
 
 # Unique
 Show
@@ -149,6 +117,73 @@ Rarity Rare
 PlayEffect Yellow
 MinimapIcon 1 Yellow Diamond
 
+
+#  HIDE  ---------------------------------------------------------------------------------------------
+
+# Hide ID
+Hide
+BaseType "Wisdom"
+AreaLevel > 15
+SetBorderColor 200 100 60
+SetBackgroundColor 30 5 5
+
+# Hide Corrupted
+Hide
+Rarity Normal Magic
+Corrupted True 
+SetFontSize 18
+SetBorderColor 0 0 0 0
+SetBackgroundColor 0 0 0 0
+
+# Hide
+Hide
+Rarity Normal Magic
+Class "Flasks" "Helmet" "Body Armour" "Gloves" "Boots" "Bow" "Quiver"
+AreaLevel > 75
+DropLevel < 70
+SetFontSize 18
+SetBorderColor 0 0 0 0
+SetBackgroundColor 0 0 0 0
+
+# Hide
+Hide
+Rarity Normal Magic
+Class "Flasks" "Helmet" "Body Armour" "Gloves" "Boots" "Bow" "Quiver"
+AreaLevel > 70
+DropLevel < 50
+SetFontSize 18
+SetBorderColor 0 0 0 0
+SetBackgroundColor 0 0 0 0
+
+# Hide
+Hide
+Rarity Normal Magic
+Class "Flasks" "Helmet" "Body Armour" "Gloves" "Boots" "Bow" "Quiver"
+AreaLevel > 50
+DropLevel < 30
+SetFontSize 18
+SetBorderColor 0 0 0 0
+SetBackgroundColor 0 0 0 0
+
+# Hide
+Hide
+Rarity Normal Magic
+Class "Flasks" "Helmet" "Body Armour" "Gloves" "Boots" "Bow" "Quiver"
+AreaLevel > 30
+DropLevel < 15
+SetFontSize 18
+SetBorderColor 0 0 0 0
+SetBackgroundColor 0 0 0 0
+
+# Hide
+Hide
+Rarity Normal Magic
+Class "Claw" "Dagger" "Sword" "Axe" "Mace" "Spear" "Flail" "Crossbows" "Wand" "Sceptre" "Staff" "Quarterstaves" "Shield" "Focus" "Buckler" "Helmets" "Body Armours" "Gloves" "Boots"  #"Bow" "Quiver" 
+AreaLevel > 15
+SetFontSize 18
+SetBorderColor 0 0 0 0
+SetBackgroundColor 0 0 0 0
+
 # Life
 Show
 Class "Life Flasks"
@@ -161,27 +196,35 @@ Class "Mana Flasks"
 SetTextColor 143 143 230
 SetBorderColor 0 0 120 200
 
-# Hide ID
-Hide
-BaseType "Wisdom"
-AreaLevel >= 20
-SetBorderColor 200 100 60
-SetBackgroundColor 30 5 5
+# ---------------------------------------------------------------------------
+# Class Gear for Crafting Show or Hide ??
 
-# Hide Corrupted
-Hide
+# Melee
+Show
+Class "Helmet" "Body Armour" "Gloves" "Boots"
 Rarity Normal Magic
-Corrupted True
-SetFontSize 18
-SetBorderColor 0 0 0 0
-SetBackgroundColor 0 0 0 0
+BaseArmour >= 1
+BaseEvasion >= 1
+BaseEnergyShield <= 1
+SetBorderColor 150 50 50
+SetBackgroundColor 100 43 43 200
 
-# Hide
-Hide
+# Range
+Show
+Class "Helmet" "Body Armour" "Gloves" "Boots"
 Rarity Normal Magic
-Class "Claw" "Dagger" "Sword" "Axe" "Mace" "Spear" "Flail" "Crossbows" "Wand" "Sceptre" "Staff" "Shield" "Focus" "Buckler"  "Helmet" "Body Armour" "Gloves" "Boots"  #"Bow" "Quiver" 
-AreaLevel >= 16
-SetFontSize 18
-SetBorderColor 0 0 0 0
-SetBackgroundColor 0 0 0 0
+BaseArmour <= 1
+BaseEvasion >= 1
+BaseEnergyShield <= 1
+SetBorderColor 0 150 0
+SetBackgroundColor 4 67 4 200
 
+# Caster
+Show
+Class "Helmet" "Body Armour" "Gloves" "Boots"
+Rarity Normal Magic
+BaseArmour <= 1
+BaseEvasion >= 1
+BaseEnergyShield >= 1
+SetBorderColor 50 50 150
+SetBackgroundColor 43 43 100 200
