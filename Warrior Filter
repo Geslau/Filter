@@ -1,19 +1,17 @@
 # Geslau Filter
 # Warrior
 
-# Gold
-Show
-BaseType == "Gold"
-StackSize >= 1000
-SetFontSize 40
-SetBorderColor 0 0 0 0
-SetBackgroundColor 0 0 0 0
-PlayEffect Brown Temp
 
+
+# TOO GOOD TO MISS -----------------------------------------------------
+
+# Show Good Base
 Show
-BaseType == "Gold"
-SetBorderColor 0 0 0 0
-SetBackgroundColor 0 0 0 0
+Rarity Normal Rare
+BaseType "Expert Steel Plate" "Expert Dualstring" "Stellar Amulet"
+SetFontSize 40
+SetBorderColor 180 180 0
+SetBackgroundColor 150 90 0 200
 
 # Unique
 Show
@@ -24,10 +22,109 @@ PlayAlertSound 3 300
 PlayEffect Brown
 MinimapIcon 2 Brown Star
 
+
+
+
+
+
+# Maps ----------------------------------------------------------------
+
+# Hide Maps while progressing
+Hide
+Class "Waystones"
+WaystoneTier <= 10
+AreaLevel >= 80
+SetTextColor 200 200 200 200
+MinimapIcon 1 White Square
+
+Hide
+Class "Waystones"
+WaystoneTier <= 8
+AreaLevel >= 78
+SetTextColor 200 200 200 200
+MinimapIcon 1 White Square
+
+Hide
+Class "Waystones"
+WaystoneTier <= 6
+AreaLevel >= 76
+SetTextColor 200 200 200 200
+MinimapIcon 1 White Square
+
+Hide
+Class "Waystones"
+WaystoneTier <= 4
+AreaLevel >= 74
+SetTextColor 200 200 200 200
+MinimapIcon 1 White Square
+
+Hide
+Class "Waystones"
+WaystoneTier <= 2
+AreaLevel >= 72
+SetTextColor 200 200 200 200
+MinimapIcon 1 White Square
+
+# Maps Red
+Show
+Class "Waystones"
+WaystoneTier >= 16
+SetTextColor 200 200 200 200
+SetFontSize 40
+PlayEffect Purple
+MinimapIcon 1 Purple Square
+
+# Maps Red
+Show
+Class "Waystones"
+WaystoneTier >= 11
+SetTextColor 200 200 200 200
+SetFontSize 40
+PlayEffect Red
+MinimapIcon 1 Red Square
+
+# Maps Yellow
+Show
+Class "Waystones"
+WaystoneTier >= 6
+SetTextColor 200 200 200 200
+SetFontSize 35
+PlayEffect Yellow
+MinimapIcon 1 Yellow Square
+
+# Maps White
+Show
+Class "Waystones"
+SetTextColor 200 200 200 200
+PlayEffect White
+MinimapIcon 1 White Square
+
+
+
+
+
+
+# Currency ----------------------------------------------------------------
+
+# Gold
+Hide
+BaseType == "Gold"
+StackSize < 1000
+AreaLevel >= 70
+SetBorderColor 0 0 0 0
+SetBackgroundColor 0 0 0 0
+
+Show
+BaseType == "Gold"
+SetBorderColor 0 0 0 0
+SetBackgroundColor 0 0 0 0
+
+
 # S Tier
 Show
 Class "Currency"
 BaseType "Mirror" "Divine" "Perfect Jeweller's Orb" "Greater Jeweller's Orb" "Distilled"  
+SetFontSize 45
 SetTextColor 163 0 0 235
 SetBorderColor 163 0 0 235
 SetBackgroundColor 255 255 255 200
@@ -38,7 +135,8 @@ MinimapIcon 0 Red Circle
 # A Tier
 Show
 Class "Currency"
-BaseType "Orb of Annulment" "Gemcutter's Prism" "Orb of Chance" "Vaal Orb"
+BaseType  "Orb of Annulment" "Gemcutter's Prism" "Orb of Chance" "Chaos Orb"
+SetFontSize 40
 SetTextColor 255 128 0
 SetBorderColor 255 207 132
 SetBackgroundColor 76 51 12 200
@@ -48,7 +146,7 @@ MinimapIcon 0 Orange Circle
 
 # B Tier
 Show
-BaseType "Exalted Orb" "Glassblower's Bauble" "Exotic" "Orb of Alchemy" "Chaos Orb" "Armourer's Scrap" "Lesser Jeweller's Orb"   "Key" "Relic"
+BaseType "Exalted Orb" "Glassblower's Bauble" "Orb of Alchemy" "Armourer's Scrap" "Chance Shard"   "Exotic"   "Key" "Relic"
 SetTextColor 255 207 132
 SetBorderColor 255 207 132
 SetBackgroundColor 76 51 12 200
@@ -58,12 +156,32 @@ MinimapIcon 1 Yellow Circle
 
 # C Tier
 Show
-BaseType "Regal Orb" "Blacksmith's Whetstone" "Artificer's Orb" "Arcanist's Etcher"
+BaseType "Vaal Orb" "Regal Orb" "Blacksmith's Whetstone" "Artificer's Orb" "Arcanist's Etcher" "Artificer's Shard"
 SetTextColor 255 245 230
 SetBorderColor 255 207 132
 SetBackgroundColor 76 51 12 200
 PlayAlertSound 2 300
 MinimapIcon 1 White Circle
+
+
+
+# D Tier and lower  Hide in End Game
+Hide
+AreaLevel >= 65
+BaseType "Orb of Augmentation" "Orb of Transmutation" "Regal Shard" "Wisdom"
+SetFontSize 18
+SetBorderColor 0 0 0 0
+SetBackgroundColor 0 0 0 0
+
+# Hide Wisdom
+Hide
+BaseType "Wisdom"
+AreaLevel > 15
+
+
+
+
+# Skill Gems ----------------------------------------------------------------
 
 # Always make Spirit gems pop
 Show
@@ -77,152 +195,114 @@ MinimapIcon 1 Cyan Triangle
 Show
 BaseType "Uncut "
 SetTextColor 13 163 156
-PlayAlertSound 2 300
 MinimapIcon 1 Cyan Triangle
+
+
+
+
+
+# Map Loot ----------------------------------------------------------------
 
 # Big Map Loot
 Show
-BaseType "Distilled" "Catalyst" "Essence of" "Omen of" "Soul Core of" "Simulacrum" " Tablet" "Breachstone" " Fragment" "Cowardly Fate" "Deadly Fate" "Victorious Fate" "Expedition Logbook"
+BaseType "Distilled" "Catalyst" "Essence of" "Omen of" "Simulacrum" " Tablet" "Breachstone" " Fragment" "Cowardly Fate" "Deadly Fate" "Victorious Fate" "Expedition Logbook"
 SetTextColor 255 255 255
 SetBorderColor 210 20 210
 SetBackgroundColor 65 20 80 200
 PlayEffect Purple 
-MinimapIcon 1 Purple Kite
+MinimapIcon 1 Purple Circle
 
 # Map Loot
 Show
-BaseType "Simulacrum Splinter" "Breach Splinter" " Artifact"
+BaseType "Simulacrum Splinter" "Breach Splinter"
 SetTextColor 255 255 255
 SetBorderColor 115 115 115
 SetBackgroundColor 65 20 80 200
 PlayEffect Purple Temp
 MinimapIcon 1 Purple Kite
 
+
+
+
+# Keys ----------------------------------------------------------------
+
 # Keys
 Show
 BaseType "Barya" 
+SetFontSize 45
 SetBorderColor 60 100 200
 SetBackgroundColor 5 8 40 200
 
 Show
 BaseType "Ultimatum"
+SetFontSize 45
 SetBorderColor 200 100 60 
 SetBackgroundColor 30 5 5 200
 
-# Runes
+
+# Sockets ----------------------------------------------------------------
+
+# Show Runes
+Show
+BaseType "Soul Core of"
+PlayEffect Red
+SetTextColor 185 9 9
+SetBorderColor 187 162 108
+
+# Hide Runes on Maps
+Hide
+BaseType "Rune"
+AreaLevel >= 65
+SetFontSize 18
+SetBorderColor 0 0 0 0
+SetBackgroundColor 0 0 0 0
+
+# Show Runes
 Show
 BaseType "Rune"
 SetTextColor 185 219 255
 SetBorderColor 77 55 48
 
+
+
+# Rares -----------------------------------------------------------------
+
 # Value Rares
 Show
 Class "Rings" "Amulets" "Belts"
 Rarity Rare
-SetFontSize 35
 PlayEffect Yellow Temp
 MinimapIcon 1 Yellow Diamond
 
 
-#  Hide  -------------------------------------------------------------------------------------------------
-
-# D Tier and lower  Hide in End Game
+#Low Rare Area 75+
 Hide
-AreaLevel >= 60
-BaseType "Orb of Augmentation" "Orb of Transmutation" "Regal Shard" "Chance Shard" "Wisdom"
+Rarity Rare
+Class "Claw" "Dagger" "Sword" "Axe" "Mace" "Spear" "Flail" "Crossbows" "Wand" "Sceptre" "Staff" "Quarterstaves" "Bow" "Shield" "Focus" "Buckler" "Quiver" "Helmet" "Body Armour" "Glove" "Boots"  
+AreaLevel >= 75
+DropLevel < 46
 SetFontSize 18
 SetBorderColor 0 0 0 0
 SetBackgroundColor 0 0 0 0
 
-# Hide Wisdom
-Hide
-BaseType "Wisdom"
-AreaLevel > 15
+
+
+# Crafable Loot -----------------------------------------------------------------
 
 # Hide None Craftable Bases
 Hide
+Class "Rings" "Amulets" "Belts" "Charms" "Claw" "Dagger" "Sword" "Axe" "Mace" "Spear" "Flail" "Crossbows" "Wand" "Sceptre" "Staff" "Quarterstaves" "Bow" "Shield" "Focus" "Buckler" "Quiver" "Helmet" "Body Armour" "Glove" "Boots"  
 Rarity Normal Magic
 Corrupted True 
 SetFontSize 18
 SetBorderColor 0 0 0 0
 SetBackgroundColor 0 0 0 0
 
-# Hide Bad Flask
+# Hide Magic Jewlery
 Hide
-Class "Flasks"
-Rarity <= Magic
-Quality <= 5
+Class "Rings" "Amulets" "Belts"
+Rarity Magic
 AreaLevel >= 65
-
-# Hide Maps while progressing
-Hide
-BaseType "Waystone"
-WaystoneTier <= 10
-AreaLevel >= 80
-SetTextColor 200 200 200 200
-
-Hide
-BaseType "Waystone"
-WaystoneTier <= 8
-AreaLevel >= 78
-SetTextColor 200 200 200 200
-
-Hide
-BaseType "Waystone"
-WaystoneTier <= 6
-AreaLevel >= 76
-SetTextColor 200 200 200 200
-
-Hide
-BaseType "Waystone"
-WaystoneTier <= 4
-AreaLevel >= 74
-SetTextColor 200 200 200 200
-
-Hide
-BaseType "Waystone"
-WaystoneTier <= 2
-AreaLevel >= 72
-SetTextColor 200 200 200 200
-
-# Maps Red
-Show
-BaseType "Waystone (Tier 11)" "Waystone (Tier 12)" "Waystone (Tier 13)" "Waystone (Tier 14)" "Waystone (Tier 15)"
-SetTextColor 200 200 200 200
-SetFontSize 40
-PlayEffect Red
-MinimapIcon 1 Red Square
-
-# Maps Yellow
-Show
-BaseType "Waystone (Tier 6)" "Waystone (Tier 7)" "Waystone (Tier 8)" "Waystone (Tier 9)" "Waystone (Tier 10)"
-SetTextColor 200 200 200 200
-SetFontSize 30
-PlayEffect Yellow
-MinimapIcon 1 Yellow Square
-
-# Maps White
-Show
-BaseType "Waystone (Tier 1)" "Waystone (Tier 2)" "Waystone (Tier 3)" "Waystone (Tier 4)" "Waystone (Tier 5)"
-SetTextColor 200 200 200 200
-PlayEffect White
-MinimapIcon 1 White Square
-
-# Hide Rare in Endgame
-Rarity Rare
-Class "Flask" "Belts" "Claw" "Dagger" "Sword" "Axe" "Mace" "Spear" "Flail" "Crossbows" "Wand" "Sceptre" "Staff" "Quarterstaves" "Shield" "Focus" "Buckler" "Bow" "Quiver" "Helmet" "Body Armour" "Glove" "Boots"
-AreaLevel >= 70
-DropLevel < 50
-SetFontSize 18
-SetBorderColor 0 0 0 0
-SetBackgroundColor 0 0 0 0
-
-# Hide Area 75+
-Hide
-Rarity Normal Magic
-Class "Flask" "Belts" "Claw" "Dagger" "Sword" "Axe" "Mace" "Spear" "Flail" "Crossbows" "Wand" "Sceptre" "Staff" "Quarterstaves" "Shield" "Focus" "Buckler" "Bow" "Quiver" "Helmet" "Body Armour" "Glove" "Boots"
-AreaLevel >= 75
-DropLevel < 70
 SetFontSize 18
 SetBorderColor 0 0 0 0
 SetBackgroundColor 0 0 0 0
@@ -230,10 +310,20 @@ SetBackgroundColor 0 0 0 0
 # Hide Area 70+
 Hide
 Rarity Normal Magic
-Class "Flask" "Belts" "Claw" "Dagger" "Sword" "Axe" "Mace" "Spear" "Flail" "Crossbows" "Wand" "Sceptre" "Staff" "Quarterstaves" "Shield" "Focus" "Buckler" "Bow" "Quiver" "Helmet" "Body Armour" "Glove" "Boots"
+Class "Flask" "Belts" "Claw" "Charms" "Dagger" "Sword" "Axe" "Mace" "Spear" "Flail" "Crossbows" "Wand" "Sceptre" "Staff" "Quarterstaves" "Bow" "Shield" "Focus" "Buckler" "Quiver" "Helmet" "Body Armour" "Glove" "Boots"  
 AreaLevel >= 70
-AreaLevel < 75
-DropLevel < 66
+DropLevel < 65
+SetFontSize 18
+SetBorderColor 0 0 0 0
+SetBackgroundColor 0 0 0 0
+
+# Hide Area 65+
+Hide
+Rarity Normal Magic
+Class "Flask" "Belts" "Claw" "Charms" "Dagger" "Sword" "Axe" "Mace" "Spear" "Flail" "Crossbows" "Wand" "Sceptre" "Staff" "Quarterstaves" "Bow" "Shield" "Focus" "Buckler" "Quiver" "Helmet" "Body Armour" "Glove" "Boots"  
+AreaLevel >= 65
+AreaLevel < 70
+DropLevel < 60
 SetFontSize 18
 SetBorderColor 0 0 0 0
 SetBackgroundColor 0 0 0 0
@@ -241,9 +331,9 @@ SetBackgroundColor 0 0 0 0
 # Hide Area 60+
 Hide
 Rarity Normal Magic
-Class "Flask" "Belts" "Claw" "Dagger" "Sword" "Axe" "Mace" "Spear" "Flail" "Crossbows" "Wand" "Sceptre" "Staff" "Quarterstaves" "Shield" "Focus" "Buckler" "Bow" "Quiver" "Helmet" "Body Armour" "Glove" "Boots"
+Class "Flask" "Belts" "Claw" "Charms" "Dagger" "Sword" "Axe" "Mace" "Spear" "Flail" "Crossbows" "Wand" "Sceptre" "Staff" "Quarterstaves" "Bow" "Shield" "Focus" "Buckler" "Quiver" "Helmet" "Body Armour" "Glove" "Boots"  
 AreaLevel >= 60
-AreaLevel < 70
+AreaLevel < 65
 DropLevel < 56
 SetFontSize 18
 SetBorderColor 0 0 0 0
@@ -252,7 +342,7 @@ SetBackgroundColor 0 0 0 0
 # Hide Area 50+
 Hide
 Rarity Normal Magic
-Class "Flask" "Belts" "Claw" "Dagger" "Sword" "Axe" "Mace" "Spear" "Flail" "Crossbows" "Wand" "Sceptre" "Staff" "Quarterstaves" "Shield" "Focus" "Buckler" "Bow" "Quiver" "Helmet" "Body Armour" "Glove" "Boots"
+Class "Flask" "Belts" "Claw" "Charms" "Dagger" "Sword" "Axe" "Mace" "Spear" "Flail" "Crossbows" "Wand" "Sceptre" "Staff" "Quarterstaves" "Bow" "Shield" "Focus" "Buckler" "Quiver" "Helmet" "Body Armour" "Glove" "Boots"  
 AreaLevel >= 50
 AreaLevel < 60
 DropLevel < 46
@@ -263,7 +353,7 @@ SetBackgroundColor 0 0 0 0
 # Hide Area 40+
 Hide
 Rarity Normal Magic
-Class "Flask" "Belts" "Claw" "Dagger" "Sword" "Axe" "Mace" "Spear" "Flail" "Crossbows" "Wand" "Sceptre" "Staff" "Quarterstaves" "Shield" "Focus" "Buckler" "Bow" "Quiver" "Helmet" "Body Armour" "Glove" "Boots"
+Class "Flask" "Belts" "Claw" "Charms" "Dagger" "Sword" "Axe" "Mace" "Spear" "Flail" "Crossbows" "Wand" "Sceptre" "Staff" "Quarterstaves" "Bow" "Shield" "Focus" "Buckler" "Quiver" "Helmet" "Body Armour" "Glove" "Boots"  
 AreaLevel >= 40
 AreaLevel < 50
 DropLevel < 36
@@ -274,7 +364,7 @@ SetBackgroundColor 0 0 0 0
 # Hide Area 30+
 Hide
 Rarity Normal Magic
-Class "Flask" "Belts" "Claw" "Dagger" "Sword" "Axe" "Mace" "Spear" "Flail" "Crossbows" "Wand" "Sceptre" "Staff" "Quarterstaves" "Shield" "Focus" "Buckler" "Bow" "Quiver" "Helmet" "Body Armour" "Glove" "Boots"
+Class "Flask" "Belts" "Claw" "Charms" "Dagger" "Sword" "Axe" "Mace" "Spear" "Flail" "Crossbows" "Wand" "Sceptre" "Staff" "Quarterstaves" "Bow" "Shield" "Focus" "Buckler" "Quiver" "Helmet" "Body Armour" "Glove" "Boots"  
 AreaLevel >= 30
 AreaLevel < 40
 DropLevel < 26
@@ -282,10 +372,11 @@ SetFontSize 18
 SetBorderColor 0 0 0 0
 SetBackgroundColor 0 0 0 0
 
+
 # Hide Area 20+
 Hide
 Rarity Normal Magic
-Class "Flask" "Belts" "Claw" "Dagger" "Sword" "Axe" "Mace" "Spear" "Flail" "Crossbows" "Wand" "Sceptre" "Staff" "Quarterstaves" "Shield" "Focus" "Buckler" "Bow" "Quiver" "Helmet" "Body Armour" "Glove" "Boots"
+Class "Flask" "Belts" "Claw" "Charms" "Dagger" "Sword" "Axe" "Mace" "Spear" "Flail" "Crossbows" "Wand" "Sceptre" "Staff" "Quarterstaves" "Bow" "Shield" "Focus" "Buckler" "Quiver" "Helmet" "Body Armour" "Glove" "Boots"  
 AreaLevel >= 20
 AreaLevel < 30
 DropLevel < 16
@@ -296,10 +387,23 @@ SetBackgroundColor 0 0 0 0
 # Hide Area 10+
 Hide
 Rarity Normal Magic
-Class "Flask" "Belts" "Claw" "Dagger" "Sword" "Axe" "Mace" "Spear" "Flail" "Crossbows" "Wand" "Sceptre" "Staff" "Quarterstaves" "Shield" "Focus" "Buckler" "Bow" "Quiver" "Helmet" "Body Armour" "Glove" "Boots"
+Class "Flask" "Belts" "Claw" "Charms" "Dagger" "Sword" "Axe" "Mace" "Spear" "Flail" "Crossbows" "Wand" "Sceptre" "Staff" "Quarterstaves" "Bow" "Shield" "Focus" "Buckler" "Quiver" "Helmet" "Body Armour" "Glove" "Boots"  
 AreaLevel >= 10
 AreaLevel < 20
 DropLevel < 6
+SetFontSize 18
+SetBorderColor 0 0 0 0
+SetBackgroundColor 0 0 0 0
+
+
+
+# Flasks -----------------------------------------------------------------
+
+# Hide Bad Flask
+Hide
+Class "Flasks"
+Rarity <= Magic
+Quality <= 5
 SetFontSize 18
 SetBorderColor 0 0 0 0
 SetBackgroundColor 0 0 0 0
@@ -316,16 +420,30 @@ Class "Mana Flasks"
 SetTextColor 143 143 230
 SetBorderColor 0 0 120 200
 
+
+
+
 # ---------------------------------------------------------------------------------------------------------------------------------------
 # SHOW Class Gear for Crafting
 
 # Pure Armour
 Show
 Class "Helmet" "Body Armour" "Glove" "Boots"
-Rarity Normal Magic
+Rarity Normal Rare
 BaseArmour >= 1
 BaseEvasion <= 1
 BaseEnergyShield <= 1
+SetBorderColor 150 50 50
+SetBackgroundColor 100 43 43 200
+
+# Pure Armour
+Show
+Class "Helmet" "Body Armour" "Glove" "Boots"
+Rarity Magic
+BaseArmour >= 1
+BaseEvasion <= 1
+BaseEnergyShield <= 1
+AreaLevel <= 60
 SetBorderColor 150 50 50
 SetBackgroundColor 100 43 43 200
 
@@ -349,20 +467,41 @@ SetBackgroundColor 100 43 43 200
 #SetBorderColor 50 50 150
 #SetBackgroundColor 43 43 100 200
 
-# Show Good Base
-Show
-BaseType "Expert Steel Plate" "Expert Dualstring" "Stellar Amulet"
-SetFontSize 40
-SetBorderColor 180 180 0
-SetBackgroundColor 150 90 0 200
 
-# Hide all after Area 10
+
+# Hide Class Weapon
 Hide
-Rarity Normal Magic
-Class "Claw" "Dagger" "Sword" "Axe" "Spear" "Flail" "Crossbows" "Wand" "Sceptre" "Staff" "Quarterstaves" "Focus" "Buckler" "Helmet" "Body Armour" "Glove" "Boots" "Bow" "Quiver" "Shield"  # "Mace"
-AreaLevel > 10
+Class "Mace"
+AreaLevel >= 65
 SetFontSize 18
 SetBorderColor 0 0 0 0
 SetBackgroundColor 0 0 0 0
 
+# Show Class Weapon
+Show
+Class "Mace"
+SetBorderColor 150 50 50
+SetBackgroundColor 100 43 43 200
 
+
+
+
+# Show Rare Semi Hidden at Maps
+Show
+Rarity Rare
+Class "Rings" "Amulets" "Belts" "Charms" "Claw" "Dagger" "Sword" "Axe" "Mace" "Spear" "Flail" "Crossbows" "Wand" "Sceptre" "Staff" "Quarterstaves" "Bow" "Shield" "Focus" "Buckler" "Quiver" "Helmet" "Body Armour" "Glove" "Boots"  
+AreaLevel >= 65
+SetFontSize 25
+SetBorderColor 0 0 0 0
+SetBackgroundColor 0 0 0 0
+
+
+
+# Hide all after Area 10
+Hide
+Rarity Normal Magic
+Class "Claw" "Dagger" "Sword" "Axe" "Mace" "Spear" "Flail" "Crossbows" "Wand" "Sceptre" "Staff" "Quarterstaves" "Bow" "Shield" "Focus" "Buckler" "Quiver" "Helmet" "Body Armour" "Glove" "Boots"    
+AreaLevel > 10
+SetFontSize 18
+SetBorderColor 0 0 0 0
+SetBackgroundColor 0 0 0 0
