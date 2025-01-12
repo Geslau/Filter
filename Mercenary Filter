@@ -1,22 +1,150 @@
-# Geslau Filter
+# Geslau Filter 2.0  Neversink upgrade
 # Mercenary
 
 
-# TOO GOOD TO MISS -----------------------------------------------------
+# TOO GOOD TO MISS ===============================================================================================================
 
-# Show Good Base
+# Show Good CLASS Base 
 Show
-Rarity Normal Rare
-BaseType "Dyad Crossbow" "Expert Dualstring" "Stellar Amulet"
+Rarity Rare
+BaseType "Dyad"
 SetFontSize 40
-SetBorderColor 180 180 0
-SetBackgroundColor 150 90 0 200
+SetBorderColor 255 150 0 200
+SetBackgroundColor 166 90 0 200
+PlayEffect Orange Temp
+MinimapIcon 1 Orange Diamond
+
+
+# Show All 
+Show
+BaseType "Fishing Rods" "Diamond"
+SetBorderColor 255 150 0 200
+SetBackgroundColor 166 90 0 200
+PlayEffect Orange Temp
+MinimapIcon 1 Orange Diamond
+
+
+# Chance Bases 
+Show
+Rarity Normal
+BaseType "Stellar Amulet" "Emerald Ring" "Heavy Belt" "Sapphire Ring"
+SetFontSize 40
+SetBorderColor 0 200 100 200
+SetBackgroundColor 0 0 0 180
+PlayEffect Green Temp
+MinimapIcon 1 Green Diamond
+
+
+
+
+# Uniques ===============================================================================================================
+
+# Exceptions #1 
+Show
+Sockets > 0
+Rarity Unique
+BaseType == "Ring"
+SetFontSize 45
+SetTextColor 0 0 0 255
+SetBorderColor 0 0 0 255
+SetBackgroundColor 188 96 37 255
+PlayAlertSound 1 300
+PlayEffect Red
+MinimapIcon 0 Yellow Star
+
+
+# Tier 1 and 2 uniques
+Show
+Rarity Unique
+BaseType == "Armoured Cap" "Emerald" "Furtive Wraps" "Incense Relic" "Ornate Belt" "Ring" "Ruby" "Sapphire" "Smuggler Coat" "Stone Tower Shield" "Timeless Jewel" "Time-Lost Diamond" "Ultimate Life Flask" "Ultimate Mana Flask" "Utility Belt" "Vase Relic"
+SetFontSize 45
+SetTextColor 255 0 0 255
+SetBorderColor 255 0 0 255
+SetBackgroundColor 255 255 255 255
+PlayAlertSound 6 300
+PlayEffect Red
+MinimapIcon 0 Red Star
+
+Show
+Rarity Unique
+BaseType == "Altar Robe" "Burnished Gauntlets" "Conqueror Plate" "Crucible Tower Shield" "Diamond" "Feathered Tiara" "Fine Bracers" "Gold Amulet" "Grand Regalia" "Grand Visage" "Heavy Crown" "Wyrm Quarterstaff"
+SetFontSize 45
+SetTextColor 0 0 0 255
+SetBorderColor 0 0 0 255
+SetBackgroundColor 188 96 37 255
+PlayAlertSound 1 300
+PlayEffect Red
+MinimapIcon 0 Yellow Star
+
+
+# Multi-Unique bases.
+Show
+Rarity Unique
+BaseType == "Amethyst Ring" "Heavy Belt" "Sapphire Ring" "Stellar Amulet"
+SetFontSize 45
+SetBorderColor 188 96 37 255
+SetBackgroundColor 53 13 13 255
+PlayAlertSound 3 300
+PlayEffect Blue
+MinimapIcon 1 Blue Star
+
+Show
+Rarity Unique
+BaseType == "Amber Amulet" "Azure Amulet" "Crimson Amulet" "Emerald Ring" "Gold Ring" "Jade Amulet" "Lazuli Ring" "Moulded Mitts" "Pearl Ring" "Solar Amulet" "Spiked Club" "Tribal Mask"
+SetFontSize 45
+SetBorderColor 188 96 37 255
+SetBackgroundColor 53 13 13 255
+PlayAlertSound 3 300
+PlayEffect Blue
+MinimapIcon 1 Blue Star
+
+
+# Low tier exceptions
+Show
+AnyEnchantment True
+Corrupted True
+Rarity Unique
+Class == "Amulets" "Belts" "Body Armours" "Boots" "Bows" "Crossbows" "Foci" "Gloves" "Helmets" "One Hand Maces" "Quarterstaves" "Quivers" "Rings" "Sceptres" "Shields" "Staves" "Two Hand Maces" "Wands"
+SetBorderColor 250 0 0 255
+PlayAlertSound 3 300
+PlayEffect Brown
+MinimapIcon 1 Brown Star
+
+
+# Tier 3 uniques 
+Show
+Rarity Unique
+BaseType == "Chain Tiara" "Explorer Armour" "Omen Crest Shield" "Shrine Sceptre" "Silk Robe"
+SetFontSize 40
+SetBorderColor 188 96 37 255
+PlayAlertSound 3 300
+PlayEffect Brown
+MinimapIcon 2 Blue Star
+
+Show
+Rarity Unique
+BaseType == "Amphora Relic" "Bloodstone Amulet" "Brimmed Helm" "Champion Cuirass" "Chiming Staff" "Closed Helm" "Coffer Relic" "Crescent Quarterstaff" "Crude Bow" "Dualstring Bow" "Felt Cap" "Gold Circlet" "Grand Cuisses" "Grand Manchettes" "Iron Ring" "Knight Armour" "Lapis Amulet" "Lattice Sandals" "Linen Wraps" "Long Quarterstaff" "Lunar Amulet" "Pilgrim Vestments" "Rawhide Belt" "Ruby Ring" "Seal Relic" "Shortbow" "Sigil Crest Shield" "Solid Mask" "Spined Bracers" "Spired Greathelm" "Tapestry Relic" "Threaded Shoes" "Topaz Ring" "Torment Club" "Vaal Cuirass" "Velour Shoes" "Volatile Wand" "Wrapped Greathelm"
+SetFontSize 40
+SetBorderColor 188 96 37 255
+PlayAlertSound 3 300
+PlayEffect Brown
+MinimapIcon 1 Brown Star
+
+
+# Tier 4 uniques
+Show
+Rarity Unique
+BaseType == "Aged Cuffs" "Anchorite Garb" "Ashen Staff" "Attuned Wand" "Beaded Circlet" "Blazon Crest Shield" "Bone Raiment" "Bone Wand" "Braced Sabatons" "Braced Tower Shield" "Broadhead Quiver" "Bronze Greaves" "Chain Mail" "Cloaked Mail" "Covert Hood" "Cowled Helm" "Crescent Targe" "Crumbling Maul" "Crystal Focus" "Cultist Crown" "Doubled Gauntlets" "Effigial Tower Shield" "Elite Greathelm" "Emblem Crest Shield" "Embossed Boots" "Engraved Focus" "Face Mask" "Feathered Robe" "Feathered Sandals" "Felled Greatclub" "Fine Belt" "Fire Quiver" "Firm Bracers" "Forge Maul" "Full Plate" "Fur Plate" "Garment" "Gauze Wraps" "Gelid Staff" "Gilded Vestments" "Goldcast Cuffs" "Gothic Quarterstaff" "Guarded Helm" "Hardwood Targe" "Hermit Garb" "Hewn Mask" "Hexer's Robe" "Hooded Mask" "Horned Crown" "Hunter Hood" "Hunting Shoes" "Intricate Gloves" "Iron Crown" "Iron Cuirass" "Iron Greaves" "Ironclad Vestments" "Jewelled Gloves" "Jingling Crest Shield" "Keth Raiment" "Lace Hood" "Laced Boots" "Layered Gauntlets" "Leaden Greathammer" "Leather Vest" "Linen Belt" "Lizardscale Boots" "Long Belt" "Mail Belt" "Mail Sabatons" "Mail Vestments" "Makeshift Crossbow" "Marabout Garb" "Maraketh Cuirass" "Martyr Crown" "Oak Greathammer" "Omen Sceptre" "Painted Tower Shield" "Pathfinder Coat" "Pelage Targe" "Plate Belt" "Plated Mace" "Pyrophyte Staff" "Quilted Vest" "Raider Plate" "Rampart Tower Shield" "Rattling Sceptre" "Recurve Bow" "Rhoahide Coat" "Ringmail Gauntlets" "Riveted Mitts" "Rogue Armour" "Rope Cuffs" "Rough Greaves" "Rusted Cuirass" "Rusted Greathelm" "Scale Mail" "Scout's Vest" "Sectioned Bracers" "Secured Leggings" "Serpentscale Coat" "Shabby Hood" "Shaman Mantle" "Shielded Helm" "Silk Slippers" "Slim Mace" "Smithing Hammer" "Soldier Greathelm" "Sombre Gloves" "Spiritbone Crown" "Splintered Tower Shield" "Stacked Sabatons" "Steel Plate" "Steelpoint Quarterstaff" "Steeltoe Boots" "Stitched Gloves" "Stone Greaves" "Straw Sandals" "Studded Greatclub" "Studded Vest" "Suede Bracers" "Tattered Robe" "Tempered Mitts" "Tense Crossbow" "Tonal Focus" "Torn Gloves" "Trimmed Greaves" "Twig Circlet" "Twig Focus" "Vagabond Armour" "Veiled Mask" "Visceral Quiver" "Visored Helm" "Voltaic Staff" "Votive Raiment" "Warrior Greathelm" "Waxed Jacket" "Wayfarer Jacket" "Wicker Tiara" "Wide Belt" "Wooden Club" "Woven Focus" "Wrapped Quarterstaff" "Wrapped Sandals"
+PlayAlertSound 3 300
+PlayEffect Brown
+MinimapIcon 2 Brown Star
+
 
 # Unique
 Show
 Rarity Unique
-SetBorderColor 175 96 37 255
-SetBackgroundColor 53 13 13 255
+SetBorderColor 175 96 37
+SetBackgroundColor 53 13 13
 PlayAlertSound 3 300
 PlayEffect Brown
 MinimapIcon 2 Brown Star
@@ -25,59 +153,67 @@ MinimapIcon 2 Brown Star
 
 
 
+# Maps ===============================================================================================================
 
-# Maps ----------------------------------------------------------------
+
+# Maps Red with Delirium
+Show
+Class "Waystones"
+WaystoneTier >= 11
+AnyEnchantment True
+SetTextColor 200 200 200 200
+SetBorderColor 98 16 117 200
+SetFontSize 40
+PlayEffect Purple Temp
+MinimapIcon 1 Purple Square
+
+
 
 # Hide Maps while progressing
 Hide
 Class "Waystones"
-WaystoneTier <= 10
+WaystoneTier <= 13
 AreaLevel >= 80
 SetTextColor 200 200 200 200
 MinimapIcon 1 White Square
 
 Hide
 Class "Waystones"
-WaystoneTier <= 8
+WaystoneTier <= 11
 AreaLevel >= 78
 SetTextColor 200 200 200 200
 MinimapIcon 1 White Square
 
 Hide
 Class "Waystones"
-WaystoneTier <= 6
+WaystoneTier <= 9
 AreaLevel >= 76
 SetTextColor 200 200 200 200
 MinimapIcon 1 White Square
 
 Hide
 Class "Waystones"
-WaystoneTier <= 4
+WaystoneTier <= 7
 AreaLevel >= 74
 SetTextColor 200 200 200 200
 MinimapIcon 1 White Square
 
 Hide
 Class "Waystones"
-WaystoneTier <= 2
+WaystoneTier <= 5
 AreaLevel >= 72
 SetTextColor 200 200 200 200
 MinimapIcon 1 White Square
 
-# Maps Red
-Show
-Class "Waystones"
-WaystoneTier >= 16
-SetTextColor 200 200 200 200
-SetFontSize 40
-PlayEffect Purple
-MinimapIcon 1 Purple Square
+
+
 
 # Maps Red
 Show
 Class "Waystones"
 WaystoneTier >= 11
 SetTextColor 200 200 200 200
+SetBorderColor 255 0 0 200
 SetFontSize 40
 PlayEffect Red
 MinimapIcon 1 Red Square
@@ -87,6 +223,7 @@ Show
 Class "Waystones"
 WaystoneTier >= 6
 SetTextColor 200 200 200 200
+SetBorderColor 255 190 0 200
 SetFontSize 35
 PlayEffect Yellow
 MinimapIcon 1 Yellow Square
@@ -95,6 +232,7 @@ MinimapIcon 1 Yellow Square
 Show
 Class "Waystones"
 SetTextColor 200 200 200 200
+SetBorderColor 200 200 200 200
 PlayEffect White
 MinimapIcon 1 White Square
 
@@ -103,7 +241,7 @@ MinimapIcon 1 White Square
 
 
 
-# Currency ----------------------------------------------------------------
+# Currency ===============================================================================================================
 
 # Gold
 Hide
@@ -116,7 +254,7 @@ SetBackgroundColor 0 0 0 0
 # Gold
 Hide
 BaseType == "Gold"
-StackSize < 1000
+StackSize < 500
 AreaLevel >= 60
 SetBorderColor 0 0 0 0
 SetBackgroundColor 0 0 0 0
@@ -130,7 +268,7 @@ SetBackgroundColor 0 0 0 0
 # S Tier
 Show
 Class "Currency"
-BaseType "Mirror" "Divine" "Perfect Jeweller's Orb" "Greater Jeweller's Orb"
+BaseType "Mirror" "Divine" "Perfect Jeweller's Orb" "Greater Jeweller's Orb" "Rhoa"
 SetFontSize 45
 SetTextColor 163 0 0 235
 SetBorderColor 163 0 0 235
@@ -175,7 +313,7 @@ MinimapIcon 1 White Circle
 # D Tier and lower  Hide in End Game
 Hide
 AreaLevel >= 65
-BaseType "Orb of Augmentation" "Orb of Transmutation" "Regal Shard" "Wisdom"
+BaseType "Orb of Augmentation" "Orb of Transmutation" "Regal Shard" "Alchemy Shard" "Wisdom"
 SetFontSize 18
 SetBorderColor 0 0 0 0
 SetBackgroundColor 0 0 0 0
@@ -188,7 +326,70 @@ AreaLevel > 15
 
 
 
-# Skill Gems ----------------------------------------------------------------
+# Skill Gems ===============================================================================================================
+
+# Hide Low Gems on High Maps
+Hide
+BaseType "Uncut "
+ItemLevel <= 17
+AreaLevel >= 80
+SetFontSize 18
+SetTextColor 13 163 156
+SetBorderColor 0 0 0 0
+SetBackgroundColor 0 0 0 0
+
+# Hide Gems on Maps
+Hide
+BaseType "Uncut "
+ItemLevel <= 15
+AreaLevel >= 70
+SetFontSize 18
+SetTextColor 13 163 156
+SetBorderColor 0 0 0 0
+SetBackgroundColor 0 0 0 0
+
+
+# Spirit level 20
+Show
+BaseType "Uncut Spirit Gem"
+ItemLevel 20
+SetFontSize 45
+SetTextColor 13 163 156
+SetBorderColor 13 163 156
+SetBackgroundColor 255 255 255 200
+PlayAlertSound 2 300
+PlayEffect Red
+MinimapIcon 1 Red Triangle
+
+# Skill level 20
+Show
+BaseType "Uncut Skill Gem"
+ItemLevel 20
+SetFontSize 45
+SetTextColor 13 163 156
+SetBorderColor 13 163 156
+SetBackgroundColor 255 255 255 200
+MinimapIcon 1 Red Triangle
+
+# Spirit level 19
+Show
+BaseType "Uncut Spirit Gem"
+ItemLevel 19
+SetFontSize 40
+SetTextColor 13 163 156
+SetBackgroundColor 6 0 60 200
+PlayAlertSound 2 300
+PlayEffect Cyan
+MinimapIcon 1 Cyan Triangle
+
+# Skill level 19
+Show
+BaseType "Uncut Skill Gem"
+ItemLevel 19
+SetFontSize 40
+SetTextColor 13 163 156
+SetBackgroundColor 6 0 60 200
+MinimapIcon 1 Cyan Triangle
 
 # Always make Spirit gems pop
 Show
@@ -208,12 +409,11 @@ MinimapIcon 1 Cyan Triangle
 
 
 
-# Map Loot ----------------------------------------------------------------
+# Map Loot ===============================================================================================================
 
 # S Tier Map Loot
 Show
-Class "Currency"
-BaseType "Fear" "Suffering" "Isolation"  
+BaseType "Fear" "Suffering" "Isolation" " Fragment" "Omen of Corruption" "Omen of Dextral Annulment" "Omen of Dextral Erasure" "Omen of Sinistral Annulment" "Omen of Sinistral Erasure" "Omen of Whittling" "Omen of Amelioration" "Greater Essence of "
 SetFontSize 45
 SetTextColor 210 20 210
 SetBorderColor 210 20 210
@@ -224,7 +424,7 @@ MinimapIcon 0 Purple Circle
 
 # Big Map Loot
 Show
-BaseType "Distilled" "Catalyst" "Essence of" "Omen of" "Simulacrum" " Tablet" "Breachstone" " Fragment" "Cowardly Fate" "Deadly Fate" "Victorious Fate" "Expedition Logbook"
+BaseType "Distilled" "Catalyst" "Essence of " "Omen of" "Simulacrum" " Tablet" "Breachstone" "Cowardly Fate" "Deadly Fate" "Victorious Fate" "Expedition Logbook" " Artifact"
 SetTextColor 255 255 255
 SetBorderColor 210 20 210
 SetBackgroundColor 65 20 80 200
@@ -243,7 +443,7 @@ MinimapIcon 1 Purple Kite
 
 
 
-# Keys ----------------------------------------------------------------
+# Keys ===============================================================================================================
 
 # Keys
 Show
@@ -259,7 +459,7 @@ SetBorderColor 200 100 60
 SetBackgroundColor 30 5 5 200
 
 
-# Sockets ----------------------------------------------------------------
+# Sockets ===============================================================================================================
 
 # Show Runes
 Show
@@ -284,7 +484,15 @@ SetBorderColor 77 55 48
 
 
 
-# Rares -----------------------------------------------------------------
+# Rares ===============================================================================================================
+
+# Itemlevel 82 rares are capable of rolling the best available mods. These are highlighted by a slightly orange hue.
+Show
+ItemLevel >= 82
+Rarity Rare
+Class == "Amulets" "Belts" "Body Armours" "Boots" "Bows" "Crossbows" "Foci" "Gloves" "Helmets" "One Hand Maces" "Quarterstaves" "Quivers" "Rings" "Sceptres" "Shields" "Staves" "Two Hand Maces" "Wands"
+SetTextColor 245 175 0
+Continue
 
 # Value Rares
 Show
@@ -306,7 +514,7 @@ SetBackgroundColor 0 0 0 0
 
 
 
-# Crafable Loot -----------------------------------------------------------------
+# Crafable Loot ===============================================================================================================
 
 # Hide None Craftable Bases
 Hide
@@ -416,7 +624,7 @@ SetBackgroundColor 0 0 0 0
 
 
 
-# Flasks -----------------------------------------------------------------
+# Flasks ===============================================================================================================
 
 # Hide Bad Flask
 Hide
@@ -441,8 +649,9 @@ SetBorderColor 0 0 120 200
 
 
 
-# ---------------------------------------------------------------------------
+# ===============================================================================================================
 # SHOW Class Gear for Crafting
+
 
 # Hybrid Armour
 #Show
@@ -502,7 +711,17 @@ SetBackgroundColor 4 67 4 200
 
 
 
-# Show Rare Semi Hidden at Maps
+# Earlyboots
+Show
+Rarity Magic
+Class == "Boots"
+AreaLevel <= 32	
+SetFontSize 40	
+SetBackgroundColor 10 0 40
+
+
+
+# Rare Semi Hidden at Maps
 Show
 Rarity Rare
 Class "Rings" "Amulets" "Belts" "Charms" "Claw" "Dagger" "Sword" "Axe" "Mace" "Spear" "Flail" "Crossbows" "Wand" "Sceptre" "Staff" "Quarterstaves" "Bow" "Shield" "Foci" "Buckler" "Quiver" "Helmet" "Body Armour" "Glove" "Boots"  
@@ -510,8 +729,6 @@ AreaLevel >= 65
 SetFontSize 25
 SetBorderColor 0 0 0 0
 SetBackgroundColor 0 0 0 0
-
-
 
 # Hide all after Area 10
 Hide
